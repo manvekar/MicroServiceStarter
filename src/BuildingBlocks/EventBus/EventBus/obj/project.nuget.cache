@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bTjQz9VeHTJ9ICfkeUuaN5h2W5xJlBm96XPRLKUSlzunuo/9B9ts7lTc9QynacjmKVr2/xKcOZBAyW8yxQ7/tw==",
+  "dgSpecHash": "zC9Gv08pAGV3o0YkMdnHkCEOP65g+w4+kSUi4peKbTW7ZZTCsUzJR31JYOdkCsH2sZlMi2OP6gWqNsivBCATHg==",
   "success": true,
-  "projectFilePath": "C:\\MYP\\APP_PROJ\\msStarter\\microServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj",
+  "projectFilePath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

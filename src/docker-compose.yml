@@ -1,0 +1,36 @@
+version: '3.4'
+
+services:
+
+ sqldata:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+
+ identity-api:
+    image: ${REGISTRY:-eshop}/identity.api:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+       context: .
+       dockerfile: Services/Identity/Identity.API/Dockerfile
+    depends_on:
+       - sqldata
+ 
+ webmvc:
+    image: ${REGISTRY:-eshop}/webmvc:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Web/WebMVC/Dockerfile
+    #depends_on:
+    #  - webshoppingagg
+    #  - webshoppingapigw     
+
+#      identity-api:
+#    image: ${DOCKER_REGISTRY-}identityapi
+#    build:
+#      context: .
+#      dockerfile: Service/Identity/Identity.API/Dockerfile
+
+#  webmvc:
+#    image: ${DOCKER_REGISTRY-}webmvc
+#    build:
+#      context: .
+#      dockerfile: Web/WebMVC/Dockerfile
+

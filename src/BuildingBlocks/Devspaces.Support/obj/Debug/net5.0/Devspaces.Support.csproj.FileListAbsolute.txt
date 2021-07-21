@@ -1,0 +1,12 @@
+C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\Devspaces.Support\bin\Debug\net5.0\Devspaces.Support.deps.json
+C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\Devspaces.Support\bin\Debug\net5.0\Devspaces.Support.dll
+C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\Devspaces.Support\bin\Debug\net5.0\ref\Devspaces.Support.dll
+C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\Devspaces.Support\bin\Debug\net5.0\Devspaces.Support.pdb
+C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\Devspaces.Support\obj\Debug\net5.0\Devspaces.Support.csproj.AssemblyReference.cache
+C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\Devspaces.Support\obj\Debug\net5.0\Devspaces.Support.GeneratedMSBuildEditorConfig.editorconfig
+C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\Devspaces.Support\obj\Debug\net5.0\Devspaces.Support.AssemblyInfoInputs.cache
+C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\Devspaces.Support\obj\Debug\net5.0\Devspaces.Support.AssemblyInfo.cs
+C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\Devspaces.Support\obj\Debug\net5.0\Devspaces.Support.csproj.CoreCompileInputs.cache
+C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\Devspaces.Support\obj\Debug\net5.0\Devspaces.Support.dll
+C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\Devspaces.Support\obj\Debug\net5.0\ref\Devspaces.Support.dll
+C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\Devspaces.Support\obj\Debug\net5.0\Devspaces.Support.pdb

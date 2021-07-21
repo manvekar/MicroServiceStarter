@@ -504,20 +504,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\manjunath_anvekar\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MYP\\DOCKER_MicroServ\\manv_eshop_core\\eShopOnContainers\\src\\BuildingBlocks\\EventBus\\EventBusRabbitMQ\\EventBusRabbitMQ.csproj",
+      "projectUniqueName": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBusRabbitMQ\\EventBusRabbitMQ.csproj",
       "projectName": "EventBusRabbitMQ",
-      "projectPath": "C:\\MYP\\DOCKER_MicroServ\\manv_eshop_core\\eShopOnContainers\\src\\BuildingBlocks\\EventBus\\EventBusRabbitMQ\\EventBusRabbitMQ.csproj",
-      "packagesPath": "C:\\Users\\manjunath_anvekar\\.nuget\\packages\\",
-      "outputPath": "C:\\MYP\\DOCKER_MicroServ\\manv_eshop_core\\eShopOnContainers\\src\\BuildingBlocks\\EventBus\\EventBusRabbitMQ\\obj\\",
+      "projectPath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBusRabbitMQ\\EventBusRabbitMQ.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBusRabbitMQ\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\MYP\\DOCKER_MicroServ\\manv_eshop_core\\eShopOnContainers\\src\\NuGet.Config",
-        "C:\\Users\\manjunath_anvekar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -531,8 +530,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\MYP\\DOCKER_MicroServ\\manv_eshop_core\\eShopOnContainers\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj": {
-              "projectPath": "C:\\MYP\\DOCKER_MicroServ\\manv_eshop_core\\eShopOnContainers\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj"
+            "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj": {
+              "projectPath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj"
             }
           }
         }
@@ -583,7 +582,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

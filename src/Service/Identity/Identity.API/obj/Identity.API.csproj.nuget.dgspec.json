@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\MYP\\APP_PROJ\\msStarter\\microServiceStarter\\src\\Service\\Identity\\Identity.API\\Identity.API.csproj": {}
+    "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\Service\\Identity\\Identity.API\\Identity.API.csproj": {}
   },
   "projects": {
-    "C:\\MYP\\APP_PROJ\\msStarter\\microServiceStarter\\src\\Service\\Identity\\Identity.API\\Identity.API.csproj": {
+    "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\Service\\Identity\\Identity.API\\Identity.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MYP\\APP_PROJ\\msStarter\\microServiceStarter\\src\\Service\\Identity\\Identity.API\\Identity.API.csproj",
+        "projectUniqueName": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\Service\\Identity\\Identity.API\\Identity.API.csproj",
         "projectName": "Identity.API",
-        "projectPath": "C:\\MYP\\APP_PROJ\\msStarter\\microServiceStarter\\src\\Service\\Identity\\Identity.API\\Identity.API.csproj",
-        "packagesPath": "C:\\Users\\manjunath_anvekar\\.nuget\\packages\\",
-        "outputPath": "C:\\MYP\\APP_PROJ\\msStarter\\microServiceStarter\\src\\Service\\Identity\\Identity.API\\obj\\",
+        "projectPath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\Service\\Identity\\Identity.API\\Identity.API.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\Service\\Identity\\Identity.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\manjunath_anvekar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -130,6 +130,10 @@
               "target": "Package",
               "version": "[5.0.2, )"
             },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.10.14, )"
+            },
             "Microsoft.Web.LibraryManager.Build": {
               "target": "Package",
               "version": "[2.1.113, )"
@@ -189,7 +193,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

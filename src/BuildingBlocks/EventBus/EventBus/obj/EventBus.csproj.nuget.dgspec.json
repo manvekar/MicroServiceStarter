@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\MYP\\APP_PROJ\\msStarter\\microServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj": {}
+    "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj": {}
   },
   "projects": {
-    "C:\\MYP\\APP_PROJ\\msStarter\\microServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj": {
+    "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MYP\\APP_PROJ\\msStarter\\microServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj",
+        "projectUniqueName": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj",
         "projectName": "EventBus",
-        "projectPath": "C:\\MYP\\APP_PROJ\\msStarter\\microServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj",
-        "packagesPath": "C:\\Users\\manjunath_anvekar\\.nuget\\packages\\",
-        "outputPath": "C:\\MYP\\APP_PROJ\\msStarter\\microServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBus\\obj\\",
+        "projectPath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBus\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\manjunath_anvekar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
