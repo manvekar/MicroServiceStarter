@@ -12745,11 +12745,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\Service\\Identity\\Identity.API\\Identity.API.csproj",
+      "projectUniqueName": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\Services\\Identity\\Identity.API\\Identity.API.csproj",
       "projectName": "Identity.API",
-      "projectPath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\Service\\Identity\\Identity.API\\Identity.API.csproj",
+      "projectPath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\Services\\Identity\\Identity.API\\Identity.API.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\Service\\Identity\\Identity.API\\obj\\",
+      "outputPath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\Services\\Identity\\Identity.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

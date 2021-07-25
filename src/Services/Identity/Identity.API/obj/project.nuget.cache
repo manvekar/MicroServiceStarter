@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+6Q8UciOdLkPpxBvdyKobiRG9p4MzFsnpnkyBu8oAq4PjPtyxvXyeg1zdwe7BPRB2/SIm1eYLbBwKP8quijXPQ==",
+  "dgSpecHash": "5tAKkS/0m5zR1JDkYldgI3u+73EUUcFwvF9XsxY8JjPmpbIUwrnmqVyWLER4Eo+x0n4FPOs4Gx4XK8rIjxhHTg==",
   "success": true,
-  "projectFilePath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\Service\\Identity\\Identity.API\\Identity.API.csproj",
+  "projectFilePath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\Services\\Identity\\Identity.API\\Identity.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\aspnetcore.healthchecks.sqlserver\\5.0.1\\aspnetcore.healthchecks.sqlserver.5.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\aspnetcore.healthchecks.ui.client\\5.0.1\\aspnetcore.healthchecks.ui.client.5.0.1.nupkg.sha512",

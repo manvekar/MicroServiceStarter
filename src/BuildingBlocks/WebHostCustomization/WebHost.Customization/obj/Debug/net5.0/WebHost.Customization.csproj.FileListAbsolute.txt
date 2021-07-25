@@ -19,7 +19,6 @@ C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\WebHostCustomi
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\WebHostCustomization\WebHost.Customization\bin\Debug\net5.0\WebHost.Customization.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\WebHostCustomization\WebHost.Customization\bin\Debug\net5.0\ref\WebHost.Customization.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\WebHostCustomization\WebHost.Customization\bin\Debug\net5.0\WebHost.Customization.pdb
-C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\WebHostCustomization\WebHost.Customization\obj\Debug\net5.0\WebHost.Customization.csproj.AssemblyReference.cache
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\WebHostCustomization\WebHost.Customization\obj\Debug\net5.0\WebHost.Customization.GeneratedMSBuildEditorConfig.editorconfig
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\WebHostCustomization\WebHost.Customization\obj\Debug\net5.0\WebHost.Customization.AssemblyInfoInputs.cache
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\WebHostCustomization\WebHost.Customization\obj\Debug\net5.0\WebHost.Customization.AssemblyInfo.cs
