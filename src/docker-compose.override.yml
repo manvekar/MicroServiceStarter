@@ -15,8 +15,8 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - ConnectionString=${ESHOP_AZURE_IDENTITY_DB:-Server=sqldata;Database=Microsoft.eShopOnContainers.Service.IdentityDb;User Id=sa;Password=Pass@word}
-      - MvcClient=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:6100
+      - ConnectionString=${MSSTR_AZURE_IDENTITY_DB:-Server=sqldata;Database=microServiceStarter.Service.IdentityDb;User Id=sa;Password=Pass@word}
+      - MvcClient=http://${MSSTR_EXTERNAL_DNS_NAME_OR_IP}:6100
       - UseCustomizationData=True
       - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}
       - OrchestratorType=${ORCHESTRATOR_TYPE}
@@ -27,7 +27,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - IdentityUrl=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:6105
+      - IdentityUrl=http://${MSSTR_EXTERNAL_DNS_NAME_OR_IP}:6105
       - IdentityUrlHC=http://identity-api/hc
       - UseCustomizationData=True
       - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}

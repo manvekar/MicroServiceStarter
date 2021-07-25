@@ -10,12 +10,12 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: http://0.0.0.0:80
       ApplicationInsights__InstrumentationKey: ""
-      ConnectionString: Server=sqldata;Database=Microsoft.eShopOnContainers.Service.IdentityDb;User
+      ConnectionString: Server=sqldata;Database=microServiceStarter.Service.IdentityDb;User
         Id=sa;Password=Pass@word
-      MvcClient: http://:6100
+      MvcClient: http://host.docker.internal:6100
       OrchestratorType: ""
       UseCustomizationData: "True"
-    image: eshop/identity.api:linux-latest
+    image: msstr/identity.api:linux-latest
     networks:
       default: null
     ports:
@@ -59,12 +59,12 @@ services:
       ASPNETCORE_URLS: http://0.0.0.0:80
       ApplicationInsights__InstrumentationKey: ""
       DOTNET_USE_POLLING_FILE_WATCHER: "1"
-      IdentityUrl: http://:6105
+      IdentityUrl: http://host.docker.internal:6105
       IdentityUrlHC: http://identity-api/hc
       NUGET_FALLBACK_PACKAGES: ""
       OrchestratorType: ""
       UseCustomizationData: "True"
-    image: eshop/webmvc:dev
+    image: msstr/webmvc:dev
     labels:
       com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net5.0/WebMVC.dll"'
       com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$(pidof

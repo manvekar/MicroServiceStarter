@@ -35,6 +35,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devspaces.Support", "Buildi
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1085709C-3DB7-46D6-B487-EEEE2409EB28}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebHost", "WebHost", "{7341D8F9-2F43-4410-BC83-8880454F2ED0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebHost.Customization", "BuildingBlocks\WebHostCustomization\WebHost.Customization\WebHost.Customization.csproj", "{B595462B-8B80-4D99-9E1F-D92B3CA5E2C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +81,10 @@ Global
 		{1085709C-3DB7-46D6-B487-EEEE2409EB28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1085709C-3DB7-46D6-B487-EEEE2409EB28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1085709C-3DB7-46D6-B487-EEEE2409EB28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B595462B-8B80-4D99-9E1F-D92B3CA5E2C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B595462B-8B80-4D99-9E1F-D92B3CA5E2C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B595462B-8B80-4D99-9E1F-D92B3CA5E2C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B595462B-8B80-4D99-9E1F-D92B3CA5E2C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +104,8 @@ Global
 		{0428140F-E7D3-4BCD-9F40-70333E6026E3} = {F41CFDD4-0C10-45EA-8145-095B02129823}
 		{D79DB5A1-2097-4442-B9C9-52F69EA5EBCE} = {773AB4D8-DDA9-4C05-82E3-298137D8D052}
 		{3626003D-8524-4CEE-947D-DE5008C864D4} = {D79DB5A1-2097-4442-B9C9-52F69EA5EBCE}
+		{7341D8F9-2F43-4410-BC83-8880454F2ED0} = {773AB4D8-DDA9-4C05-82E3-298137D8D052}
+		{B595462B-8B80-4D99-9E1F-D92B3CA5E2C8} = {7341D8F9-2F43-4410-BC83-8880454F2ED0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DE1DD087-C2CF-4BFF-AE47-1FD9D457661A}

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/upR5/CDPOI3KgtN3gr+N4c6JzJQeTySSo/aPcIeVuLe6nRXZa6Xg+zTEauFSmcVIcGQ0IMc3i7NlBwLCbPqUg==",
+  "dgSpecHash": "+6Q8UciOdLkPpxBvdyKobiRG9p4MzFsnpnkyBu8oAq4PjPtyxvXyeg1zdwe7BPRB2/SIm1eYLbBwKP8quijXPQ==",
   "success": true,
   "projectFilePath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\Service\\Identity\\Identity.API\\Identity.API.csproj",
   "expectedPackageFiles": [

@@ -337,12 +337,12 @@ C:\Users\user\Downloads\MYP\microServiceStarter\MicroServiceStarter\src\Building
 C:\Users\user\Downloads\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus.Tests\obj\Debug\net5.0\ref\EventBus.Tests.dll
 C:\Users\user\Downloads\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus.Tests\obj\Debug\net5.0\EventBus.Tests.pdb
 C:\Users\user\Downloads\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus.Tests\obj\Debug\net5.0\EventBus.Tests.genruntimeconfig.cache
-C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus.Tests\bin\Debug\net5.0\testhost.exe
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus.Tests\bin\Debug\net5.0\testhost.dll
+C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus.Tests\bin\Debug\net5.0\testhost.exe
+C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus.Tests\bin\Debug\net5.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus.Tests\bin\Debug\net5.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus.Tests\bin\Debug\net5.0\xunit.runner.reporters.netcoreapp10.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus.Tests\bin\Debug\net5.0\xunit.runner.utility.netcoreapp10.dll
-C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus.Tests\bin\Debug\net5.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus.Tests\bin\Debug\net5.0\EventBus.Tests.deps.json
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus.Tests\bin\Debug\net5.0\EventBus.Tests.runtimeconfig.json
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus.Tests\bin\Debug\net5.0\EventBus.Tests.runtimeconfig.dev.json

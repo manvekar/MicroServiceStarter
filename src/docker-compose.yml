@@ -6,7 +6,7 @@ services:
     image: mcr.microsoft.com/mssql/server:2019-latest
 
  identity-api:
-    image: ${REGISTRY:-eshop}/identity.api:${PLATFORM:-linux}-${TAG:-latest}
+    image: ${REGISTRY:-msstr}/identity.api:${PLATFORM:-linux}-${TAG:-latest}
     build:
        context: .
        dockerfile: Services/Identity/Identity.API/Dockerfile
@@ -14,7 +14,7 @@ services:
        - sqldata
  
  webmvc:
-    image: ${REGISTRY:-eshop}/webmvc:${PLATFORM:-linux}-${TAG:-latest}
+    image: ${REGISTRY:-msstr}/webmvc:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
       dockerfile: Web/WebMVC/Dockerfile

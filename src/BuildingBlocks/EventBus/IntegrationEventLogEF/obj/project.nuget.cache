@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Aw6RUWRWFL8ZD/5sA7fLepuNm9XrOb6UODWpGBl7h23xLIDORzg0jgO3PaiLITVU1hOtVijtjdHGuISfhYMxQQ==",
+  "dgSpecHash": "jt3IqGQOEDFSs4TZ45Cdfe6c4mvWrhgrhP87CWWLLinih22klqhT05nSnVIH17SLmNbqmkNRwopGep88kLLGIg==",
   "success": true,
   "projectFilePath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\BuildingBlocks\\EventBus\\IntegrationEventLogEF\\IntegrationEventLogEF.csproj",
   "expectedPackageFiles": [

@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   webmvc:
-    image: eshop/webmvc:dev
+    image: msstr/webmvc:dev
     container_name: WebMVC
     build:
       target: base

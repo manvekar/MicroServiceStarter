@@ -37,7 +37,6 @@ C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\Event
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus\bin\Debug\net5.0\EventBus.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus\bin\Debug\net5.0\ref\EventBus.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus\bin\Debug\net5.0\EventBus.pdb
-C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus\obj\Debug\net5.0\EventBus.csproj.AssemblyReference.cache
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus\obj\Debug\net5.0\EventBus.GeneratedMSBuildEditorConfig.editorconfig
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus\obj\Debug\net5.0\EventBus.AssemblyInfoInputs.cache
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\EventBus\EventBus\obj\Debug\net5.0\EventBus.AssemblyInfo.cs
