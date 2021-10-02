@@ -27,3 +27,4 @@ C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\WebHostCustomi
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\WebHostCustomization\WebHost.Customization\obj\Debug\net5.0\ref\WebHost.Customization.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\WebHostCustomization\WebHost.Customization\obj\Debug\net5.0\WebHost.Customization.pdb
 C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\WebHostCustomization\WebHost.Customization\obj\Debug\net5.0\WebHost.Customization.genruntimeconfig.cache
+C:\MYP\microServiceStarter\MicroServiceStarter\src\BuildingBlocks\WebHostCustomization\WebHost.Customization\obj\Debug\net5.0\WebHost.Customization.csproj.AssemblyReference.cache

@@ -9,7 +9,7 @@ services:
     ports:
       - "6433:1433"
     volumes:
-      - mssql-sqldata:/var/opt/mssql  
+      - msstr-sqldata:/var/opt/mssql  
 
  identity-api:
     environment:
@@ -35,5 +35,5 @@ services:
     ports:
       - "6100:80"
 volumes:
-  mssql-sqldata:
+  msstr-sqldata:
     external: false

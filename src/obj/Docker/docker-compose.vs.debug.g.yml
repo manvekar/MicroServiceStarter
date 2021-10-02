@@ -2,8 +2,8 @@ version: '3.4'
 
 services:
   identity-api:
-    image: msstr/identity.api:dev
-    container_name: Identity.API
+    image: msstr/msstridentity.api:dev
+    container_name: Identity.API_1
     build:
       target: base
       labels:
@@ -29,8 +29,8 @@ services:
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
     tty: true
   webmvc:
-    image: msstr/webmvc:dev
-    container_name: WebMVC
+    image: msstr/msstrwebmvc:dev
+    container_name: WebMVC_1
     build:
       target: base
       labels:

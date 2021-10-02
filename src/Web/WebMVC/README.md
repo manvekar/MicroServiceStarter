@@ -15,14 +15,8 @@ In the global directory you will find the scripts needed to run and deploy the d
 #Run
 Once the deploy process of docker-compose finishes you have to be able to access the services in this urls:
 - Web: http://localhost:6100
-- Catalog service: http://localhost:5101
-- Orders service: http://localhost:5102
-- Basket service: http://localhost:5103
 - Identity service: http://localhost:6105
-- Orders data (SQL Server): Server=tcp:localhost,5432;Database=microServiceStarter.Web.Services.OrderingDb;User Id=sa;Password=Pass@word;
-- Catalog data (SQL Server): Server=tcp:localhost,5434;Database=CatalogDB;User Id=sa;Password=Pass@word
 - Identity data (SQL Server): Server=localhost,6433;Database=aspnet-microServiceStarter.Web;User Id=sa;Password=Pass@word
-- Basket data (Redis): listening in localhost:6379
 
 
 

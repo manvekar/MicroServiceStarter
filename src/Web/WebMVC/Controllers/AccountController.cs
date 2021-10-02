@@ -35,7 +35,7 @@ namespace microServiceStarter.Web.WebMVC.Controllers
 
             // "Catalog" because UrlHelper doesn't support nameof() for controllers
             // https://github.com/aspnet/Mvc/issues/5853
-            return RedirectToAction(nameof(CatalogController.Index), "Catalog");
+            return RedirectToAction(nameof(HomeController.Index), "Home");
         }
 
         public async Task<IActionResult> Signout()
@@ -45,7 +45,7 @@ namespace microServiceStarter.Web.WebMVC.Controllers
 
             // "Catalog" because UrlHelper doesn't support nameof() for controllers
             // https://github.com/aspnet/Mvc/issues/5853
-            var homeUrl = Url.Action(nameof(CatalogController.Index), "Catalog");
+            var homeUrl = Url.Action(nameof(HomeController.Index), "Home");
             return new SignOutResult(OpenIdConnectDefaults.AuthenticationScheme,
                 new Microsoft.AspNetCore.Authentication.AuthenticationProperties { RedirectUri = homeUrl });        //Manjunath - added Microsoft. to resolve CS0234 error
         }

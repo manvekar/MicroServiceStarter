@@ -2,7 +2,7 @@ services:
   identity-api:
     build:
       context: C:\MYP\microServiceStarter\MicroServiceStarter\src
-      dockerfile: C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\Dockerfile
+      dockerfile: Services/Identity/Identity.API/Dockerfile
       labels:
         com.microsoft.created-by: visual-studio
         com.microsoft.visual-studio.project-name: Identity.API
@@ -11,164 +11,87 @@ services:
     depends_on:
       sqldata:
         condition: service_started
-    entrypoint:
-    - tail
-    - -f
-    - /dev/null
+    entrypoint: tail -f /dev/null
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
       ASPNETCORE_URLS: http://0.0.0.0:80
-      ApplicationInsights__InstrumentationKey: ""
+      ApplicationInsights__InstrumentationKey: ''
       ConnectionString: Server=sqldata;Database=microServiceStarter.Service.IdentityDb;User
         Id=sa;Password=Pass@word
-      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
       MvcClient: http://host.docker.internal:6100
-      NUGET_FALLBACK_PACKAGES: ""
-      OrchestratorType: ""
+      NUGET_FALLBACK_PACKAGES: ''
+      OrchestratorType: ''
       UseCustomizationData: "True"
-    image: msstr/identity.api:dev
+    image: msstr/msstridentity.api:dev
     labels:
       com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net5.0/Identity.API.dll"'
-      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$(pidof
-        dotnet); then kill $PID; fi"
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
       com.microsoft.visualstudio.debuggee.program: dotnet
       com.microsoft.visualstudio.debuggee.workingdirectory: /app
-    networks:
-      default: null
     ports:
-    - mode: ingress
+    - published: 6105
       target: 80
-      published: 6105
-      protocol: tcp
     tty: true
     volumes:
-    - type: bind
-      source: C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API
-      target: /app
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\MYP\microServiceStarter\MicroServiceStarter\src
-      target: /src
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\Users\user\vsdbg\vs2017u5
-      target: /remote_debugger
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\Users\user\.nuget\packages\
-      target: /root/.nuget/packages
-      read_only: true
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\Users\user\AppData\Roaming/ASP.NET/Https
-      target: /root/.aspnet/https
-      read_only: true
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\Users\user\AppData\Roaming/Microsoft/UserSecrets
-      target: /root/.microsoft/usersecrets
-      read_only: true
-      bind:
-        create_host_path: true
+    - C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API:/app:rw
+    - C:\Users\user\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\user\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\user\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\user\.nuget\packages:/root/.nuget/packages:ro
+    - C:\MYP\microServiceStarter\MicroServiceStarter\src:/src:rw
   sqldata:
     environment:
       ACCEPT_EULA: "Y"
       SA_PASSWORD: Pass@word
     image: mcr.microsoft.com/mssql/server:2019-latest
-    networks:
-      default: null
     ports:
-    - mode: ingress
+    - published: 6433
       target: 1433
-      published: 6433
-      protocol: tcp
     volumes:
-    - type: volume
-      source: mssql-sqldata
-      target: /var/opt/mssql
-      volume: {}
+    - mssql-sqldata:/var/opt/mssql:rw
   webmvc:
     build:
       context: C:\MYP\microServiceStarter\MicroServiceStarter\src
-      dockerfile: C:\MYP\microServiceStarter\MicroServiceStarter\src\Web\WebMVC\Dockerfile
+      dockerfile: Web/WebMVC/Dockerfile
       labels:
         com.microsoft.created-by: visual-studio
         com.microsoft.visual-studio.project-name: WebMVC
       target: base
     container_name: WebMVC
-    entrypoint:
-    - tail
-    - -f
-    - /dev/null
+    entrypoint: tail -f /dev/null
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
       ASPNETCORE_URLS: http://0.0.0.0:80
-      ApplicationInsights__InstrumentationKey: ""
-      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      ApplicationInsights__InstrumentationKey: ''
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
       IdentityUrl: http://host.docker.internal:6105
       IdentityUrlHC: http://identity-api/hc
-      NUGET_FALLBACK_PACKAGES: ""
-      OrchestratorType: ""
+      NUGET_FALLBACK_PACKAGES: ''
+      OrchestratorType: ''
       UseCustomizationData: "True"
-    image: msstr/webmvc:dev
+    image: msstr/msstrwebmvc:dev
     labels:
       com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net5.0/WebMVC.dll"'
-      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$(pidof
-        dotnet); then kill $PID; fi"
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
       com.microsoft.visualstudio.debuggee.program: dotnet
       com.microsoft.visualstudio.debuggee.workingdirectory: /app
-    networks:
-      default: null
     ports:
-    - mode: ingress
+    - published: 6100
       target: 80
-      published: 6100
-      protocol: tcp
     tty: true
     volumes:
-    - type: bind
-      source: C:\MYP\microServiceStarter\MicroServiceStarter\src\Web\WebMVC
-      target: /app
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\MYP\microServiceStarter\MicroServiceStarter\src
-      target: /src
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\Users\user\vsdbg\vs2017u5
-      target: /remote_debugger
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\Users\user\.nuget\packages\
-      target: /root/.nuget/packages
-      read_only: true
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\Users\user\AppData\Roaming/ASP.NET/Https
-      target: /root/.aspnet/https
-      read_only: true
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\Users\user\AppData\Roaming/Microsoft/UserSecrets
-      target: /root/.microsoft/usersecrets
-      read_only: true
-      bind:
-        create_host_path: true
-networks:
-  default:
-    name: dockercompose17674480211955883176_default
+    - C:\MYP\microServiceStarter\MicroServiceStarter\src\Web\WebMVC:/app:rw
+    - C:\Users\user\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\user\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\user\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\user\.nuget\packages:/root/.nuget/packages:ro
+    - C:\MYP\microServiceStarter\MicroServiceStarter\src:/src:rw
+version: '3.4'
 volumes:
   mssql-sqldata:
-    name: dockercompose17674480211955883176_mssql-sqldata
+    external: false

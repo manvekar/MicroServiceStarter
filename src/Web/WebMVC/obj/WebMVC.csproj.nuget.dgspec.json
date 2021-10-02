@@ -168,6 +168,10 @@
               "target": "Package",
               "version": "[1.10.14, )"
             },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
             "Microsoft.Web.LibraryManager.Build": {
               "target": "Package",
               "version": "[2.1.113, )"

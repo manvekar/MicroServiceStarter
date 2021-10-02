@@ -151,21 +151,6 @@ namespace microServiceStarter.Web.WebMVC
             //set 5 min as the lifetime for each HttpMessageHandler int the pool
             services.AddHttpClient("extendedhandlerlifetime").SetHandlerLifetime(TimeSpan.FromMinutes(5)).AddDevspacesSupport();
 
-            //add http client services
-            services.AddHttpClient<IBasketService, BasketService>()
-                   .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Sample. Default lifetime is 2 minutes
-                   .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
-                   .AddDevspacesSupport();
-
-            services.AddHttpClient<ICatalogService, CatalogService>()
-                   .AddDevspacesSupport();
-
-            services.AddHttpClient<IOrderingService, OrderingService>()
-                 .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
-                 .AddHttpMessageHandler<HttpClientRequestIdDelegatingHandler>()
-                 .AddDevspacesSupport();
-
-
             //add custom application services
             services.AddTransient<IIdentityParser<ApplicationUser>, IdentityParser>();
 

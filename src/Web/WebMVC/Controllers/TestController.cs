@@ -10,11 +10,13 @@ namespace WebMVC.Controllers
 {
     class TestPayload
     {
+/*
         public int CatalogItemId { get; set; }
 
         public string BasketId { get; set; }
 
         public int Quantity { get; set; }
+*/
     }
 
     [Authorize]
@@ -28,34 +30,37 @@ namespace WebMVC.Controllers
             _client = client;
             _appUserParser = identityParser;
         }
+        /*
+                public async Task<IActionResult> Ocelot()
+                {
 
-        public async Task<IActionResult> Ocelot()
-        {
-            var url = "http://apigw/shopping/api/v1/basket/items";
+                    var url = "http://apigw/shopping/api/v1/basket/items";
 
-            var payload = new TestPayload()
-            {
-                CatalogItemId = 1,
-                Quantity = 1,
-                BasketId = _appUserParser.Parse(User).Id
-            };
+                    var payload = new TestPayload()
+                    {
+                        CatalogItemId = 1,
+                        Quantity = 1,
+                        BasketId = _appUserParser.Parse(User).Id
+                    };
 
-            var content = new StringContent(JsonSerializer.Serialize(payload), System.Text.Encoding.UTF8, "application/json");
+                    var content = new StringContent(JsonSerializer.Serialize(payload), System.Text.Encoding.UTF8, "application/json");
 
 
-            var response = await _client.CreateClient(nameof(IBasketService))
-                .PostAsync(url, content);
+                    var response = await _client.CreateClient(nameof(IBasketService))
+                        .PostAsync(url, content);
 
-            if (response.IsSuccessStatusCode)
-            {
-                var str = await response.Content.ReadAsStringAsync();
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var str = await response.Content.ReadAsStringAsync();
 
-                return Ok(str);
-            }
-            else
-            {
-                return Ok(new { response.StatusCode, response.ReasonPhrase });
-            }
-        }
+                        return Ok(str);
+                    }
+                    else
+                    {
+                        return Ok(new { response.StatusCode, response.ReasonPhrase });
+                    }
+
+                }
+        */
     }
 }

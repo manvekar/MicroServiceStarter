@@ -2,8 +2,8 @@ version: '3.4'
 
 services:
   identity-api:
-    image: msstr/identity.api:dev
-    container_name: Identity.API
+    image: msstr/msstridentity.api:dev
+    container_name: Identity.API_1
     build:
       target: base
       labels:
@@ -12,25 +12,25 @@ services:
     environment:
       - DOTNET_USE_POLLING_FILE_WATCHER=1
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
-      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_identity-api$
+      - NUGET_FALLBACK_PACKAGES=
     volumes:
       - C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API:/app
       - C:\MYP\microServiceStarter\MicroServiceStarter\src:/src
       - C:\Users\user\vsdbg\vs2017u5:/remote_debugger:rw
-#$nuget_volume_mapping_identity-api$
+      - C:\Users\user\.nuget\packages\:/root/.nuget/packages:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
 
     entrypoint: tail -f /dev/null
     labels:
       com.microsoft.visualstudio.debuggee.program: "dotnet"
-      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_identity-api$ \"/app/bin/Debug/net5.0/Identity.API.dll\""
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/net5.0/Identity.API.dll\""
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
     tty: true
   webmvc:
-    image: msstr/webmvc:dev
-    container_name: WebMVC
+    image: msstr/msstrwebmvc:dev
+    container_name: WebMVC_1
     build:
       target: base
       labels:
@@ -39,19 +39,19 @@ services:
     environment:
       - DOTNET_USE_POLLING_FILE_WATCHER=1
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
-      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_webmvc$
+      - NUGET_FALLBACK_PACKAGES=
     volumes:
       - C:\MYP\microServiceStarter\MicroServiceStarter\src\Web\WebMVC:/app
       - C:\MYP\microServiceStarter\MicroServiceStarter\src:/src
       - C:\Users\user\vsdbg\vs2017u5:/remote_debugger:rw
-#$nuget_volume_mapping_webmvc$
+      - C:\Users\user\.nuget\packages\:/root/.nuget/packages:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
 
     entrypoint: tail -f /dev/null
     labels:
       com.microsoft.visualstudio.debuggee.program: "dotnet"
-      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_webmvc$ \"/app/bin/Debug/net5.0/WebMVC.dll\""
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/net5.0/WebMVC.dll\""
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
     tty: true

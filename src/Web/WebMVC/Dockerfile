@@ -54,5 +54,5 @@ FROM build AS publish
 
 FROM base AS final
 WORKDIR /app
-#COPY --from=publish /app .
+COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "WebMVC.dll"]
