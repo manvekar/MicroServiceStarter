@@ -21,7 +21,7 @@ Web MVC :  http://host.docker.internal:6100/
 Identity.API :  http://host.docker.internal:6500/
 ```
 
->Note: compared to eShopOnContainers the ports for containers have been configred 6XXX instead so you can parallely run the Microsoft eShopOnContainers app.
+>Note: compared to eShopOnContainers the ports for containers have been configred on ports 6XXX instead so you can parallely run the Microsoft eShopOnContainers app.
 
 This App uses 
 DotnetCore for APIs and other laters
