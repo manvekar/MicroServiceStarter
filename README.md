@@ -1,6 +1,4 @@
-<a href="https://dot.net/architecture">
-   <img src="https://github.com/dotnet-architecture/eShopOnContainers/raw/dev/img/eshop_logo.png" alt="eShop logo" title="eShopOnContainers" align="right" height="60" />
-</a>
+
 # .NET Microservices Sample Reference Application inspired from eShopOnContainers
 
 A microservices starter template application based on .NET Core reference application, to be based on a simplified microservices architecture and Docker containers.
