@@ -729,7 +729,6 @@ C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.AP
 C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\bin\Debug\net5.0\Microsoft.Extensions.DiagnosticAdapter.dll
@@ -750,6 +749,8 @@ C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.AP
 C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\bin\Debug\net5.0\Microsoft.OpenApi.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\bin\Debug\net5.0\Microsoft.VisualBasic.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\bin\Debug\net5.0\Npgsql.dll
+C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\bin\Debug\net5.0\Pipelines.Sockets.Unofficial.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\bin\Debug\net5.0\Polly.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\bin\Debug\net5.0\Serilog.dll

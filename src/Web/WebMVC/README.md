@@ -17,7 +17,7 @@ Once the deploy process of docker-compose finishes you have to be able to access
 - Web: http://localhost:6100
 - Identity service: http://localhost:6105
 - Identity data (SQL Server): Server=localhost,6433;Database=aspnet-microServiceStarter.Web;User Id=sa;Password=Pass@word
-
+- Identity data (Postgrese Database): Host=host.docker.internal;Port=6433;Database=microServiceStarter.Services.IdentityDb;Username=postgres;Password=postgres
 
 
 

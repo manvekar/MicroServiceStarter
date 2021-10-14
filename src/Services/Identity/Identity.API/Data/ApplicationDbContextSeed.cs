@@ -42,7 +42,7 @@ namespace microServiceStarter.Services.Identity.API.Data
 
                 if (useCustomizationData)
                 {
-                    GetPreconfiguredImages(contentRootPath, webroot, logger);
+                    //GetPreconfiguredImages(contentRootPath, webroot, logger);
                 }
             }
             catch (Exception ex)
@@ -148,19 +148,19 @@ namespace microServiceStarter.Services.Identity.API.Data
                 CardType = 1,
                 City = "Redmond",
                 Country = "U.S.",
-                Email = "learnembrace@gmail.com",
+                Email = "demouser@microsoft.com",
                 Expiration = "12/21",
                 Id = Guid.NewGuid().ToString(),
                 LastName = "DemoLastName",
                 Name = "DemoUser",
                 PhoneNumber = "1234567890",
-                UserName = "learnembrace@gmail.com",
+                UserName = "demouser@microsoft.com",
                 ZipCode = "98052",
                 State = "WA",
                 Street = "15703 NE 61st Ct",
                 SecurityNumber = "535",
-                NormalizedEmail = "learnembrace@gmail.com",
-                NormalizedUserName = "learnembrace@gmail.com",
+                NormalizedEmail = "DEMOUSER@MICROSOFT.COM",
+                NormalizedUserName = "DEMOUSER@MICROSOFT.COM",
                 SecurityStamp = Guid.NewGuid().ToString("D"),
             };
 
@@ -192,6 +192,7 @@ namespace microServiceStarter.Services.Identity.API.Data
             return csvheaders;
         }
 
+        /*
         static void GetPreconfiguredImages(string contentRootPath, string webroot, ILogger logger)
         {
             try
@@ -231,5 +232,6 @@ namespace microServiceStarter.Services.Identity.API.Data
                 logger.LogError(ex, "EXCEPTION ERROR: {Message}", ex.Message); ;
             }
         }
+        */
     }
 }

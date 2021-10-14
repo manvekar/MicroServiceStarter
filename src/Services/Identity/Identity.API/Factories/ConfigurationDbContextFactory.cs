@@ -20,7 +20,9 @@ namespace Identity.API.Factories
             var optionsBuilder = new DbContextOptionsBuilder<ConfigurationDbContext>();
             var storeOptions = new ConfigurationStoreOptions();
 
-            optionsBuilder.UseSqlServer(config["ConnectionString"], sqlServerOptionsAction: o => o.MigrationsAssembly("Identity.API"));
+            //optionsBuilder.UseSqlServer(config["ConnectionString"], sqlServerOptionsAction: o => o.MigrationsAssembly("Identity.API"));
+            optionsBuilder.UseNpgsql(config["ConnectionString"], o => o.MigrationsAssembly("Identity.API"));
+            //optionsBuilder.UseNpgsql(config["ConnectionString"]);
 
             return new ConfigurationDbContext(optionsBuilder.Options, storeOptions);
         }

@@ -18,6 +18,29 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\ConfigurationDb\**" />
+    <Compile Remove="Migrations\ConfigurationDb_SqlServer\**" />
+    <Compile Remove="Migrations\PersistedGrantDb\**" />
+    <Content Remove="Migrations\ConfigurationDb\**" />
+    <Content Remove="Migrations\ConfigurationDb_SqlServer\**" />
+    <Content Remove="Migrations\PersistedGrantDb\**" />
+    <EmbeddedResource Remove="Migrations\ConfigurationDb\**" />
+    <EmbeddedResource Remove="Migrations\ConfigurationDb_SqlServer\**" />
+    <EmbeddedResource Remove="Migrations\PersistedGrantDb\**" />
+    <None Remove="Migrations\ConfigurationDb\**" />
+    <None Remove="Migrations\ConfigurationDb_SqlServer\**" />
+    <None Remove="Migrations\PersistedGrantDb\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20190729091724_InitialMigration_SqlServer.cs" />
+    <Compile Remove="Migrations\20190729091724_InitialMigration_SqlServer.Designer.cs" />
+    <Compile Remove="Migrations\20211009153813_InitialCreatePgSQL.cs" />
+    <Compile Remove="Migrations\20211009153813_InitialCreatePgSQL.Designer.cs" />
+    <Compile Remove="Migrations\ApplicationDbContextModelSnapshot_SqlServer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="5.0.1" />
     <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="5.0.1" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
@@ -36,15 +59,19 @@
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.HealthChecks" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.HealthChecks" Version="1.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.2">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.10">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="5.0.2" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.14" />
     <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.1.113" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.10" />
     <PackageReference Include="Polly" Version="7.2.1" />
     <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
     <PackageReference Include="Serilog.Enrichers.Environment" Version="2.1.3" />

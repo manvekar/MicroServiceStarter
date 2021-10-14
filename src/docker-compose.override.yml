@@ -4,18 +4,18 @@ services:
 
  sqldata:
     environment:
-      - SA_PASSWORD=Pass@word
-      - ACCEPT_EULA=Y
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     ports:
-      - "6433:1433"
+      - "6433:5432"
     volumes:
-      - msstr-sqldata:/var/opt/mssql  
+      - msstr-sqldata:/var/lib/postgres  
 
  identity-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - ConnectionString=${MSSTR_AZURE_IDENTITY_DB:-Server=sqldata;Database=microServiceStarter.Service.IdentityDb;User Id=sa;Password=Pass@word}
+      - ConnectionString=${MSSTR_AZURE_IDENTITY_DB:-Host=host.docker.internal;Port=6433;Database=microServiceStarter.Service.IdentityDb;Username=postgres;Password=postgres}
       - MvcClient=http://${MSSTR_EXTERNAL_DNS_NAME_OR_IP}:6100
       - UseCustomizationData=True
       - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}

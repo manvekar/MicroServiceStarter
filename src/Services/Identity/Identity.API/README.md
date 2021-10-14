@@ -11,4 +11,6 @@ This service is a identity provider or STS (Security Token Service) currently im
 Check procedures on how to get the sample app started at the Wiki:
 https://github.com/dotnet/eShopOnContainers/wiki
 
+UI
+	_Layout.html - MasterPage layout
 

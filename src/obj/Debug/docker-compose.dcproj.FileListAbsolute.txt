@@ -47,8 +47,7 @@ C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\Azure.Core.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\IdentityServer4.EntityFramework.Storage.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\Microsoft.EntityFrameworkCore.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\Polly.dll
-C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
-C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\Autofac.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\IdentityServer4.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\Microsoft.Extensions.Identity.Core.dll
@@ -57,6 +56,7 @@ C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\Microsoft.AspNetCor
 C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\Azure.Identity.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\Azure.Extensions.AspNetCore.Configuration.Secrets.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\System.Data.SqlClient.dll
+C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\HealthChecks.SqlServer.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\Microsoft.Data.SqlClient.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\IdentityServer4.AspNetIdentity.dll
@@ -90,6 +90,7 @@ C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\HealthChecks.UI.Cor
 C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\System.Memory.Data.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\AutoMapper.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\Npgsql.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\IdentityModel.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll

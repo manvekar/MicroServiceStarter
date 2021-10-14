@@ -1,10 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
+﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
-using System;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace Identity.API.Migrations.ConfigurationDb
+namespace Identity.API.Migrations.IndentityServer.Postgres.ConfigurationDb
 {
-    public partial class InitialConfigurationMigration : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,16 +12,16 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "ApiResources",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Enabled = table.Column<bool>(nullable: false),
-                    Name = table.Column<string>(maxLength: 200, nullable: false),
-                    DisplayName = table.Column<string>(maxLength: 200, nullable: true),
-                    Description = table.Column<string>(maxLength: 1000, nullable: true),
-                    Created = table.Column<DateTime>(nullable: false),
-                    Updated = table.Column<DateTime>(nullable: true),
-                    LastAccessed = table.Column<DateTime>(nullable: true),
-                    NonEditable = table.Column<bool>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Enabled = table.Column<bool>(type: "boolean", nullable: false),
+                    Name = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
+                    DisplayName = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: true),
+                    Description = table.Column<string>(type: "character varying(1000)", maxLength: 1000, nullable: true),
+                    Created = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    Updated = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
+                    LastAccessed = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
+                    NonEditable = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -32,49 +32,49 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "Clients",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Enabled = table.Column<bool>(nullable: false),
-                    ClientId = table.Column<string>(maxLength: 200, nullable: false),
-                    ProtocolType = table.Column<string>(maxLength: 200, nullable: false),
-                    RequireClientSecret = table.Column<bool>(nullable: false),
-                    ClientName = table.Column<string>(maxLength: 200, nullable: true),
-                    Description = table.Column<string>(maxLength: 1000, nullable: true),
-                    ClientUri = table.Column<string>(maxLength: 2000, nullable: true),
-                    LogoUri = table.Column<string>(maxLength: 2000, nullable: true),
-                    RequireConsent = table.Column<bool>(nullable: false),
-                    AllowRememberConsent = table.Column<bool>(nullable: false),
-                    AlwaysIncludeUserClaimsInIdToken = table.Column<bool>(nullable: false),
-                    RequirePkce = table.Column<bool>(nullable: false),
-                    AllowPlainTextPkce = table.Column<bool>(nullable: false),
-                    AllowAccessTokensViaBrowser = table.Column<bool>(nullable: false),
-                    FrontChannelLogoutUri = table.Column<string>(maxLength: 2000, nullable: true),
-                    FrontChannelLogoutSessionRequired = table.Column<bool>(nullable: false),
-                    BackChannelLogoutUri = table.Column<string>(maxLength: 2000, nullable: true),
-                    BackChannelLogoutSessionRequired = table.Column<bool>(nullable: false),
-                    AllowOfflineAccess = table.Column<bool>(nullable: false),
-                    IdentityTokenLifetime = table.Column<int>(nullable: false),
-                    AccessTokenLifetime = table.Column<int>(nullable: false),
-                    AuthorizationCodeLifetime = table.Column<int>(nullable: false),
-                    ConsentLifetime = table.Column<int>(nullable: true),
-                    AbsoluteRefreshTokenLifetime = table.Column<int>(nullable: false),
-                    SlidingRefreshTokenLifetime = table.Column<int>(nullable: false),
-                    RefreshTokenUsage = table.Column<int>(nullable: false),
-                    UpdateAccessTokenClaimsOnRefresh = table.Column<bool>(nullable: false),
-                    RefreshTokenExpiration = table.Column<int>(nullable: false),
-                    AccessTokenType = table.Column<int>(nullable: false),
-                    EnableLocalLogin = table.Column<bool>(nullable: false),
-                    IncludeJwtId = table.Column<bool>(nullable: false),
-                    AlwaysSendClientClaims = table.Column<bool>(nullable: false),
-                    ClientClaimsPrefix = table.Column<string>(maxLength: 200, nullable: true),
-                    PairWiseSubjectSalt = table.Column<string>(maxLength: 200, nullable: true),
-                    Created = table.Column<DateTime>(nullable: false),
-                    Updated = table.Column<DateTime>(nullable: true),
-                    LastAccessed = table.Column<DateTime>(nullable: true),
-                    UserSsoLifetime = table.Column<int>(nullable: true),
-                    UserCodeType = table.Column<string>(maxLength: 100, nullable: true),
-                    DeviceCodeLifetime = table.Column<int>(nullable: false),
-                    NonEditable = table.Column<bool>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Enabled = table.Column<bool>(type: "boolean", nullable: false),
+                    ClientId = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
+                    ProtocolType = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
+                    RequireClientSecret = table.Column<bool>(type: "boolean", nullable: false),
+                    ClientName = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: true),
+                    Description = table.Column<string>(type: "character varying(1000)", maxLength: 1000, nullable: true),
+                    ClientUri = table.Column<string>(type: "character varying(2000)", maxLength: 2000, nullable: true),
+                    LogoUri = table.Column<string>(type: "character varying(2000)", maxLength: 2000, nullable: true),
+                    RequireConsent = table.Column<bool>(type: "boolean", nullable: false),
+                    AllowRememberConsent = table.Column<bool>(type: "boolean", nullable: false),
+                    AlwaysIncludeUserClaimsInIdToken = table.Column<bool>(type: "boolean", nullable: false),
+                    RequirePkce = table.Column<bool>(type: "boolean", nullable: false),
+                    AllowPlainTextPkce = table.Column<bool>(type: "boolean", nullable: false),
+                    AllowAccessTokensViaBrowser = table.Column<bool>(type: "boolean", nullable: false),
+                    FrontChannelLogoutUri = table.Column<string>(type: "character varying(2000)", maxLength: 2000, nullable: true),
+                    FrontChannelLogoutSessionRequired = table.Column<bool>(type: "boolean", nullable: false),
+                    BackChannelLogoutUri = table.Column<string>(type: "character varying(2000)", maxLength: 2000, nullable: true),
+                    BackChannelLogoutSessionRequired = table.Column<bool>(type: "boolean", nullable: false),
+                    AllowOfflineAccess = table.Column<bool>(type: "boolean", nullable: false),
+                    IdentityTokenLifetime = table.Column<int>(type: "integer", nullable: false),
+                    AccessTokenLifetime = table.Column<int>(type: "integer", nullable: false),
+                    AuthorizationCodeLifetime = table.Column<int>(type: "integer", nullable: false),
+                    ConsentLifetime = table.Column<int>(type: "integer", nullable: true),
+                    AbsoluteRefreshTokenLifetime = table.Column<int>(type: "integer", nullable: false),
+                    SlidingRefreshTokenLifetime = table.Column<int>(type: "integer", nullable: false),
+                    RefreshTokenUsage = table.Column<int>(type: "integer", nullable: false),
+                    UpdateAccessTokenClaimsOnRefresh = table.Column<bool>(type: "boolean", nullable: false),
+                    RefreshTokenExpiration = table.Column<int>(type: "integer", nullable: false),
+                    AccessTokenType = table.Column<int>(type: "integer", nullable: false),
+                    EnableLocalLogin = table.Column<bool>(type: "boolean", nullable: false),
+                    IncludeJwtId = table.Column<bool>(type: "boolean", nullable: false),
+                    AlwaysSendClientClaims = table.Column<bool>(type: "boolean", nullable: false),
+                    ClientClaimsPrefix = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: true),
+                    PairWiseSubjectSalt = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: true),
+                    Created = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    Updated = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
+                    LastAccessed = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
+                    UserSsoLifetime = table.Column<int>(type: "integer", nullable: true),
+                    UserCodeType = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    DeviceCodeLifetime = table.Column<int>(type: "integer", nullable: false),
+                    NonEditable = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -85,18 +85,18 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "IdentityResources",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Enabled = table.Column<bool>(nullable: false),
-                    Name = table.Column<string>(maxLength: 200, nullable: false),
-                    DisplayName = table.Column<string>(maxLength: 200, nullable: true),
-                    Description = table.Column<string>(maxLength: 1000, nullable: true),
-                    Required = table.Column<bool>(nullable: false),
-                    Emphasize = table.Column<bool>(nullable: false),
-                    ShowInDiscoveryDocument = table.Column<bool>(nullable: false),
-                    Created = table.Column<DateTime>(nullable: false),
-                    Updated = table.Column<DateTime>(nullable: true),
-                    NonEditable = table.Column<bool>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Enabled = table.Column<bool>(type: "boolean", nullable: false),
+                    Name = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
+                    DisplayName = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: true),
+                    Description = table.Column<string>(type: "character varying(1000)", maxLength: 1000, nullable: true),
+                    Required = table.Column<bool>(type: "boolean", nullable: false),
+                    Emphasize = table.Column<bool>(type: "boolean", nullable: false),
+                    ShowInDiscoveryDocument = table.Column<bool>(type: "boolean", nullable: false),
+                    Created = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    Updated = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
+                    NonEditable = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -107,10 +107,10 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "ApiClaims",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Type = table.Column<string>(maxLength: 200, nullable: false),
-                    ApiResourceId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    ApiResourceId = table.Column<int>(type: "integer", nullable: false),
+                    Type = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -127,11 +127,11 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "ApiProperties",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Key = table.Column<string>(maxLength: 250, nullable: false),
-                    Value = table.Column<string>(maxLength: 2000, nullable: false),
-                    ApiResourceId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    ApiResourceId = table.Column<int>(type: "integer", nullable: false),
+                    Key = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: false),
+                    Value = table.Column<string>(type: "character varying(2000)", maxLength: 2000, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -148,15 +148,15 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "ApiScopes",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(maxLength: 200, nullable: false),
-                    DisplayName = table.Column<string>(maxLength: 200, nullable: true),
-                    Description = table.Column<string>(maxLength: 1000, nullable: true),
-                    Required = table.Column<bool>(nullable: false),
-                    Emphasize = table.Column<bool>(nullable: false),
-                    ShowInDiscoveryDocument = table.Column<bool>(nullable: false),
-                    ApiResourceId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
+                    DisplayName = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: true),
+                    Description = table.Column<string>(type: "character varying(1000)", maxLength: 1000, nullable: true),
+                    Required = table.Column<bool>(type: "boolean", nullable: false),
+                    Emphasize = table.Column<bool>(type: "boolean", nullable: false),
+                    ShowInDiscoveryDocument = table.Column<bool>(type: "boolean", nullable: false),
+                    ApiResourceId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -173,14 +173,14 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "ApiSecrets",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Description = table.Column<string>(maxLength: 1000, nullable: true),
-                    Value = table.Column<string>(maxLength: 4000, nullable: false),
-                    Expiration = table.Column<DateTime>(nullable: true),
-                    Type = table.Column<string>(maxLength: 250, nullable: false),
-                    Created = table.Column<DateTime>(nullable: false),
-                    ApiResourceId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    ApiResourceId = table.Column<int>(type: "integer", nullable: false),
+                    Description = table.Column<string>(type: "character varying(1000)", maxLength: 1000, nullable: true),
+                    Value = table.Column<string>(type: "character varying(4000)", maxLength: 4000, nullable: false),
+                    Expiration = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
+                    Type = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: false),
+                    Created = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -197,11 +197,11 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "ClientClaims",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Type = table.Column<string>(maxLength: 250, nullable: false),
-                    Value = table.Column<string>(maxLength: 250, nullable: false),
-                    ClientId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Type = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: false),
+                    Value = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: false),
+                    ClientId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -218,10 +218,10 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "ClientCorsOrigins",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Origin = table.Column<string>(maxLength: 150, nullable: false),
-                    ClientId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Origin = table.Column<string>(type: "character varying(150)", maxLength: 150, nullable: false),
+                    ClientId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -238,10 +238,10 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "ClientGrantTypes",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    GrantType = table.Column<string>(maxLength: 250, nullable: false),
-                    ClientId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    GrantType = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: false),
+                    ClientId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -258,10 +258,10 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "ClientIdPRestrictions",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Provider = table.Column<string>(maxLength: 200, nullable: false),
-                    ClientId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Provider = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
+                    ClientId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -278,10 +278,10 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "ClientPostLogoutRedirectUris",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    PostLogoutRedirectUri = table.Column<string>(maxLength: 2000, nullable: false),
-                    ClientId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    PostLogoutRedirectUri = table.Column<string>(type: "character varying(2000)", maxLength: 2000, nullable: false),
+                    ClientId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -298,11 +298,11 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "ClientProperties",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Key = table.Column<string>(maxLength: 250, nullable: false),
-                    Value = table.Column<string>(maxLength: 2000, nullable: false),
-                    ClientId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    ClientId = table.Column<int>(type: "integer", nullable: false),
+                    Key = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: false),
+                    Value = table.Column<string>(type: "character varying(2000)", maxLength: 2000, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -319,10 +319,10 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "ClientRedirectUris",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    RedirectUri = table.Column<string>(maxLength: 2000, nullable: false),
-                    ClientId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    RedirectUri = table.Column<string>(type: "character varying(2000)", maxLength: 2000, nullable: false),
+                    ClientId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -339,10 +339,10 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "ClientScopes",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Scope = table.Column<string>(maxLength: 200, nullable: false),
-                    ClientId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Scope = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
+                    ClientId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -359,14 +359,14 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "ClientSecrets",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Description = table.Column<string>(maxLength: 2000, nullable: true),
-                    Value = table.Column<string>(maxLength: 4000, nullable: false),
-                    Expiration = table.Column<DateTime>(nullable: true),
-                    Type = table.Column<string>(maxLength: 250, nullable: false),
-                    Created = table.Column<DateTime>(nullable: false),
-                    ClientId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    ClientId = table.Column<int>(type: "integer", nullable: false),
+                    Description = table.Column<string>(type: "character varying(2000)", maxLength: 2000, nullable: true),
+                    Value = table.Column<string>(type: "character varying(4000)", maxLength: 4000, nullable: false),
+                    Expiration = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
+                    Type = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: false),
+                    Created = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -383,10 +383,10 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "IdentityClaims",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Type = table.Column<string>(maxLength: 200, nullable: false),
-                    IdentityResourceId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    IdentityResourceId = table.Column<int>(type: "integer", nullable: false),
+                    Type = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -403,11 +403,11 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "IdentityProperties",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Key = table.Column<string>(maxLength: 250, nullable: false),
-                    Value = table.Column<string>(maxLength: 2000, nullable: false),
-                    IdentityResourceId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    IdentityResourceId = table.Column<int>(type: "integer", nullable: false),
+                    Key = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: false),
+                    Value = table.Column<string>(type: "character varying(2000)", maxLength: 2000, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -424,10 +424,10 @@ namespace Identity.API.Migrations.ConfigurationDb
                 name: "ApiScopeClaims",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Type = table.Column<string>(maxLength: 200, nullable: false),
-                    ApiScopeId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    ApiScopeId = table.Column<int>(type: "integer", nullable: false),
+                    Type = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false)
                 },
                 constraints: table =>
                 {

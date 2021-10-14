@@ -17,8 +17,7 @@ services:
       ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
       ASPNETCORE_URLS: http://0.0.0.0:80
       ApplicationInsights__InstrumentationKey: ''
-      ConnectionString: Server=sqldata;Database=microServiceStarter.Service.IdentityDb;User
-        Id=sa;Password=Pass@word
+      ConnectionString: Host=host.docker.internal;Port=6433;Database=microServiceStarter.Service.IdentityDb;Username=postgres;Password=postgres
       DOTNET_USE_POLLING_FILE_WATCHER: '1'
       MvcClient: http://host.docker.internal:6100
       NUGET_FALLBACK_PACKAGES: ''
@@ -44,14 +43,14 @@ services:
     - C:\MYP\microServiceStarter\MicroServiceStarter\src:/src:rw
   sqldata:
     environment:
-      ACCEPT_EULA: "Y"
-      SA_PASSWORD: Pass@word
-    image: mcr.microsoft.com/mssql/server:2019-latest
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    image: postgres:latest
     ports:
     - published: 6433
-      target: 1433
+      target: 5432
     volumes:
-    - mssql-sqldata:/var/opt/mssql:rw
+    - msstr-sqldata:/var/lib/postgres:rw
   webmvc:
     build:
       context: C:\MYP\microServiceStarter\MicroServiceStarter\src
@@ -93,5 +92,5 @@ services:
     - C:\MYP\microServiceStarter\MicroServiceStarter\src:/src:rw
 version: '3.4'
 volumes:
-  mssql-sqldata:
+  msstr-sqldata:
     external: false

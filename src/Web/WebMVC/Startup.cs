@@ -185,10 +185,6 @@ namespace microServiceStarter.Web.WebMVC
                 options.RequireHttpsMetadata = false;
                 options.Scope.Add("openid");
                 options.Scope.Add("profile");
-                options.Scope.Add("orders");
-                options.Scope.Add("basket");
-                options.Scope.Add("webshoppingagg");
-                options.Scope.Add("orders.signalrhub");
             });
 
             return services;

@@ -3,7 +3,7 @@ version: '3.4'
 services:
 
  sqldata:
-    image: mcr.microsoft.com/mssql/server:2019-latest
+    image: postgres:latest
 
  identity-api:
     image: ${REGISTRY:-msstr}/msstridentity.api:${PLATFORM:-linux}-${TAG:-latest}

@@ -3,7 +3,7 @@ version: '3.4'
 services:
   identity-api:
     image: msstr/msstridentity.api:dev
-    container_name: Identity.API_1
+    container_name: Identity.API
     build:
       target: base
       labels:
@@ -30,7 +30,7 @@ services:
     tty: true
   webmvc:
     image: msstr/msstrwebmvc:dev
-    container_name: WebMVC_1
+    container_name: WebMVC
     build:
       target: base
       labels:
