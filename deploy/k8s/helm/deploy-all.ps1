@@ -67,7 +67,9 @@ $ingressValuesFile="ingress_values.yaml"
 
 if ($useLocalk8s -eq $true) {
     $ingressValuesFile="ingress_values_dockerk8s.yaml"
-    $dns="localhost"
+    #$dns="localhost" #note in kubernetes cluster this will cause issue [15]  mentioned in PNP_SELF_MicroServiceStarter
+    #$dns="gateway.docker.internal"
+    $dns="host.docker.internal" #fix for issue [15]  mentioned in PNP_SELF_MicroServiceStarter
 }
 
 if ($externalDns -eq "aks") {
