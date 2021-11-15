@@ -21,6 +21,7 @@ using Microsoft.Extensions.Logging;
 using StackExchange.Redis;
 using System;
 using System.Reflection;
+using Microsoft.AspNetCore.HttpOverrides;
 //using Microsoft.AspNetCore.Http;
 
 namespace microServiceStarter.Services.Identity.API
@@ -70,7 +71,8 @@ namespace microServiceStarter.Services.Identity.API
             services.AddHealthChecks()
                 .AddCheck("self", () => HealthCheckResult.Healthy())
                 //.AddSqlServer(Configuration["ConnectionString"],
-                .AddSqlServer(Configuration["ConnectionString"],
+                //.AddSqlServer(Configuration["ConnectionString"],
+                .AddNpgSql(Configuration["ConnectionString"],
                     name: "IdentityDB-check",
                     tags: new string[] { "IdentityDB" });
 
@@ -121,6 +123,14 @@ namespace microServiceStarter.Services.Identity.API
             services.AddControllers();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            //needed for load balancer to forward headers
+            services.Configure<ForwardedHeadersOptions>(options => {
+                options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+                options.RequireHeaderSymmetry = false;
+                options.KnownNetworks.Clear();
+                options.KnownProxies.Clear();
+            });
 
             var container = new ContainerBuilder();
             container.Populate(services);

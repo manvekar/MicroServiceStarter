@@ -1,0 +1,21 @@
+{{- $name := include "webstatus.fullname" . -}}
+{{- $identity := include "url-of" (list .Values.app.ingress.entries.identity .) -}}
+{{- $mvc := include "url-of" (list .Values.app.ingress.entries.mvc .) -}}
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "cfg-{{ $name }}"
+  labels:
+    app: {{ template "webstatus.name" . }}
+    chart: {{ template "webstatus.chart" .}}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+data:
+  all__InstrumentationKey: "{{ .Values.inf.appinsights.key }}"
+  all__UseAzureServiceBus: "{{ .Values.inf.eventbus.useAzure }}"
+  webstatus__keystore: {{ .Values.inf.redis.keystore.constr }}
+  name__mvc__hc: WebMVC HTTP Check
+  internalurls__mvc__hc: http://{{ .Values.app.svc.mvc }}/hc
+  name__identity__hc: Identity HTTP Check
+  internalurls__identity__hc: http://{{ .Values.app.svc.identity }}/hc

@@ -1,0 +1,64 @@
+replicaCount: 1
+clusterName: msstr-k8s
+pathBase: /identity
+
+image:
+  repository: manvekar/msstridentity.api
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  annotations: {}
+  hosts:
+    - chart-example.local
+  tls: []
+
+resources: {}
+
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+env:
+  urls:
+  configmap:
+    - name: ConnectionString
+      key: identity__ConnectionString
+    - name: DPConnectionString
+      key: identity__keystore
+    - name: ApplicationInsights__InstrumentationKey
+      key: all__InstrumentationKey
+    - name: MvcClient
+      key: mvc_e
+    - name: EnableDevspaces
+      key: enableDevspaces
+  values:
+    - name: ASPNETCORE_ENVIRONMENT
+      value: Development
+    - name: OrchestratorType
+      value: 'K8S'
+    - name: IsClusterEnv
+      value: 'True'
+
+probes:
+  liveness:
+    path: /liveness
+    initialDelaySeconds: 10
+    periodSeconds: 15
+    port: 80
+  readiness:
+    path: /hc
+    timeoutSeconds: 5
+    initialDelaySeconds: 90
+    periodSeconds: 60
+    port: 80
+
+enableDevspaces: "false"

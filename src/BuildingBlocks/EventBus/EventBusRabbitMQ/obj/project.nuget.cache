@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8ggn+PlmRMICiSYuLrF26CRt6ay/wIwvKbCCXwTBNXHCWIN2Kxqss0/YCp6Y5FbNGrT9n3BOU3IPBcr3hgvyqA==",
+  "dgSpecHash": "WGhv3I7UEoOCKbL/pg0udY44BVR7NjCFeMBR7zMsw94tnd8q9lo8mT1kTygdSF7gGs0QPBkgT3qufUDAX0F7/g==",
   "success": true,
   "projectFilePath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBusRabbitMQ\\EventBusRabbitMQ.csproj",
   "expectedPackageFiles": [

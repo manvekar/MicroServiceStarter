@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yUB4hgM63w7PLS1V4qAusMjUU8jRRPy5gwP3glWTMMi/+DYZEhkyKPp0nHI8cWCgzI5KKEHfRKKMeyOk9GY8Gg==",
+  "dgSpecHash": "C+M7WdrM9KFJfHBwXQGGcNhRzzckngrhZ13KMlNZqAC4ylcc7TNQqqaIUBZTDjG2AdFq9BPU0ehVoBq+LiTDsA==",
   "success": true,
   "projectFilePath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\BuildingBlocks\\WebHostCustomization\\WebHost.Customization\\WebHost.Customization.csproj",
   "expectedPackageFiles": [

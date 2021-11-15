@@ -20,6 +20,7 @@
       "outputPath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBus\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
+        "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\NuGet.Config",
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

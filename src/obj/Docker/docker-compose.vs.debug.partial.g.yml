@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   identity-api:
-    image: msstr/msstridentity.api:dev
+    image: manvekar/msstridentity.api:dev
     container_name: Identity.API
     build:
       target: base
@@ -29,7 +29,7 @@ services:
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
     tty: true
   webmvc:
-    image: msstr/msstrwebmvc:dev
+    image: manvekar/msstrwebmvc:dev
     container_name: WebMVC
     build:
       target: base
@@ -52,6 +52,34 @@ services:
     labels:
       com.microsoft.visualstudio.debuggee.program: "dotnet"
       com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/net5.0/WebMVC.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  webstatus:
+    image: manvekar/msstrwebstatus:dev
+    container_name: WebStatus
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "WebStatus"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - C:\MYP\microServiceStarter\MicroServiceStarter\src\Web\WebStatus:/app
+      - C:\MYP\microServiceStarter\MicroServiceStarter\src:/src
+      - C:\Users\user\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\user\.nuget\packages\:/root/.nuget/packages:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/net5.0/WebStatus.dll\""
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
     tty: true

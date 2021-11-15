@@ -34,6 +34,20 @@ services:
       - OrchestratorType=${ORCHESTRATOR_TYPE}
     ports:
       - "6100:80"
+
+ webstatus:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - HealthChecksUI__HealthChecks__0__Name=WebMVC HTTP Check
+      - HealthChecksUI__HealthChecks__0__Uri=http://webmvc/hc
+      - HealthChecksUI__HealthChecks__1__Name=Identity HTTP Check
+      - HealthChecksUI__HealthChecks__1__Uri=http://identity-api/hc
+      - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}
+      - OrchestratorType=${ORCHESTRATOR_TYPE}
+    ports:
+      - "6107:80"
+
 volumes:
   msstr-sqldata:
     external: false

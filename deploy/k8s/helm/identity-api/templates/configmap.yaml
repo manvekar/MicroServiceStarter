@@ -1,0 +1,19 @@
+{{- $name := include "identity-api.fullname" . -}}
+{{- $sqlsrv := include "sql-name" . -}}
+{{- $mvc_url := include "url-of" (list .Values.app.ingress.entries.mvc  .) -}}
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "cfg-{{ $name }}"
+  labels:
+    app: {{ template "identity-api.name" . }}
+    chart: {{ template "identity-api.chart" .}}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+data:
+  identity__ConnectionString: Server={{ $sqlsrv }};Database={{ .Values.inf.sql.identity.db }};User Id={{ .Values.inf.sql.common.user }};Password={{ .Values.inf.sql.common.pwd }};
+  identity__keystore: {{ .Values.inf.redis.keystore.constr }}
+  all__InstrumentationKey: "{{ .Values.inf.appinsights.key }}"
+  mvc_e: http://{{ $mvc_url }}
+  enableDevspaces: "{{ .Values.enableDevspaces }}"

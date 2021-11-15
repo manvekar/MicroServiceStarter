@@ -23,7 +23,7 @@ services:
       NUGET_FALLBACK_PACKAGES: ''
       OrchestratorType: ''
       UseCustomizationData: "True"
-    image: msstr/msstridentity.api:dev
+    image: manvekar/msstridentity.api:dev
     labels:
       com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net5.0/Identity.API.dll"'
       com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
@@ -72,7 +72,7 @@ services:
       NUGET_FALLBACK_PACKAGES: ''
       OrchestratorType: ''
       UseCustomizationData: "True"
-    image: msstr/msstrwebmvc:dev
+    image: manvekar/msstrwebmvc:dev
     labels:
       com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net5.0/WebMVC.dll"'
       com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
@@ -85,6 +85,46 @@ services:
     tty: true
     volumes:
     - C:\MYP\microServiceStarter\MicroServiceStarter\src\Web\WebMVC:/app:rw
+    - C:\Users\user\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\user\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\user\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\user\.nuget\packages:/root/.nuget/packages:ro
+    - C:\MYP\microServiceStarter\MicroServiceStarter\src:/src:rw
+  webstatus:
+    build:
+      context: C:\MYP\microServiceStarter\MicroServiceStarter\src
+      dockerfile: Web/WebStatus/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: WebStatus
+      target: base
+    container_name: WebStatus
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: http://0.0.0.0:80
+      ApplicationInsights__InstrumentationKey: ''
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      HealthChecksUI__HealthChecks__0__Name: WebMVC HTTP Check
+      HealthChecksUI__HealthChecks__0__Uri: http://webmvc/hc
+      HealthChecksUI__HealthChecks__1__Name: Identity HTTP Check
+      HealthChecksUI__HealthChecks__1__Uri: http://identity-api/hc
+      NUGET_FALLBACK_PACKAGES: ''
+      OrchestratorType: ''
+    image: manvekar/msstrwebstatus:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net5.0/WebStatus.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 6107
+      target: 80
+    tty: true
+    volumes:
+    - C:\MYP\microServiceStarter\MicroServiceStarter\src\Web\WebStatus:/app:rw
     - C:\Users\user\vsdbg\vs2017u5:/remote_debugger:rw
     - C:\Users\user\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
     - C:\Users\user\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro

@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "AspNetCore.HealthChecks.NpgSql/5.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "5.0.1",
+          "Npgsql": "5.0.3"
+        },
+        "compile": {
+          "lib/net5.0/HealthChecks.NpgSql.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/HealthChecks.NpgSql.dll": {}
+        }
+      },
       "AspNetCore.HealthChecks.SqlServer/5.0.1": {
         "type": "package",
         "dependencies": {
@@ -4228,6 +4241,19 @@
     }
   },
   "libraries": {
+    "AspNetCore.HealthChecks.NpgSql/5.0.2": {
+      "sha512": "SgqAg8GZbbk4s/NvJaHL1Y/dfxE0YOqBqjvD2ss2u/43ghAlKwAx+7Xkxjvuarmw4P/JYlJEfQuQ5BJUgEIl8g==",
+      "type": "package",
+      "path": "aspnetcore.healthchecks.npgsql/5.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "aspnetcore.healthchecks.npgsql.5.0.2.nupkg.sha512",
+        "aspnetcore.healthchecks.npgsql.nuspec",
+        "lib/net5.0/HealthChecks.NpgSql.dll",
+        "lib/netstandard2.0/HealthChecks.NpgSql.dll"
+      ]
+    },
     "AspNetCore.HealthChecks.SqlServer/5.0.1": {
       "sha512": "UPYUP66ltOcg6fxbPKZMadKxtG9qIdL2objWodo1/M74f+xfDtYy57pxLE5uB56CGhk6SaQ7sAn0nCTlf5flLw==",
       "type": "package",
@@ -12773,6 +12799,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "AspNetCore.HealthChecks.NpgSql >= 5.0.2",
       "AspNetCore.HealthChecks.SqlServer >= 5.0.1",
       "AspNetCore.HealthChecks.UI.Client >= 5.0.1",
       "Autofac.Extensions.DependencyInjection >= 7.1.0",
@@ -12822,6 +12849,7 @@
       "outputPath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\Services\\Identity\\Identity.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
+        "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\NuGet.Config",
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -12848,6 +12876,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "AspNetCore.HealthChecks.NpgSql": {
+            "target": "Package",
+            "version": "[5.0.2, )"
+          },
           "AspNetCore.HealthChecks.SqlServer": {
             "target": "Package",
             "version": "[5.0.1, )"

@@ -839,3 +839,4 @@ C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.AP
 C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\obj\Debug\net5.0\ref\Identity.API.dll
 C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\obj\Debug\net5.0\Identity.API.pdb
 C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\obj\Debug\net5.0\Identity.API.genruntimeconfig.cache
+C:\MYP\microServiceStarter\MicroServiceStarter\src\Services\Identity\Identity.API\bin\Debug\net5.0\HealthChecks.NpgSql.dll

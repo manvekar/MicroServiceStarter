@@ -7,7 +7,7 @@
     <GenerateErrorForMissingTargetingPacks>false</GenerateErrorForMissingTargetingPacks>
     <IsTransformWebConfigDisabled>true</IsTransformWebConfigDisabled>
     <LangVersion>preview</LangVersion>
-    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..</DockerfileContext>
   </PropertyGroup>
 
@@ -18,15 +18,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Deployments\Rancher\**" />
     <Compile Remove="Migrations\ConfigurationDb\**" />
     <Compile Remove="Migrations\ConfigurationDb_SqlServer\**" />
     <Compile Remove="Migrations\PersistedGrantDb\**" />
+    <Content Remove="Deployments\Rancher\**" />
     <Content Remove="Migrations\ConfigurationDb\**" />
     <Content Remove="Migrations\ConfigurationDb_SqlServer\**" />
     <Content Remove="Migrations\PersistedGrantDb\**" />
+    <EmbeddedResource Remove="Deployments\Rancher\**" />
     <EmbeddedResource Remove="Migrations\ConfigurationDb\**" />
     <EmbeddedResource Remove="Migrations\ConfigurationDb_SqlServer\**" />
     <EmbeddedResource Remove="Migrations\PersistedGrantDb\**" />
+    <None Remove="Deployments\Rancher\**" />
     <None Remove="Migrations\ConfigurationDb\**" />
     <None Remove="Migrations\ConfigurationDb_SqlServer\**" />
     <None Remove="Migrations\PersistedGrantDb\**" />
@@ -41,6 +45,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.NpgSql" Version="5.0.2" />
     <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="5.0.1" />
     <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="5.0.1" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
@@ -94,6 +99,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Deployments\" />
     <Folder Include="Extensions\" />
   </ItemGroup>
 

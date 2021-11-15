@@ -6,7 +6,7 @@ services:
     image: postgres:latest
 
  identity-api:
-    image: ${REGISTRY:-msstr}/msstridentity.api:${PLATFORM:-linux}-${TAG:-latest}
+    image: ${REGISTRY:-manvekar}/msstridentity.api:${PLATFORM:-linux}-${TAG:-latest}
     build:
        context: .
        dockerfile: Services/Identity/Identity.API/Dockerfile
@@ -14,8 +14,13 @@ services:
        - sqldata
  
  webmvc:
-    image: ${REGISTRY:-msstr}/msstrwebmvc:${PLATFORM:-linux}-${TAG:-latest}
+    image: ${REGISTRY:-manvekar}/msstrwebmvc:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
       dockerfile: Web/WebMVC/Dockerfile
 
+ webstatus:
+    image: ${REGISTRY:-manvekar}/msstrwebstatus:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Web/WebStatus/Dockerfile

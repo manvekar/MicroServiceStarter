@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "U4zMGA73D0vdLkX9z8SnoEokc3aLg0oHfx+YwJXg8FUoteLOELI5DwMB5bJQc18VfR9PBiqq3FQI6Px7g846ew==",
+  "dgSpecHash": "ROSQ2PB06oPG19IExU8mqmnRfIJOQMqHJlgkJzFxF7UGv3Ld3JA/pfGTcaVtnnIJFH7mMz4raGGQfnmfJu0aZA==",
   "success": true,
   "projectFilePath": "C:\\MYP\\microServiceStarter\\MicroServiceStarter\\src\\BuildingBlocks\\EventBus\\EventBus.Tests\\EventBus.Tests.csproj",
   "expectedPackageFiles": [

@@ -1,0 +1,13 @@
+# This helm values file defines app-based settings
+# Charts use those values, so this file **MUST** be included in all chart releases
+
+app:                                                    # app global settings
+  name: "my-mstartr"                                      # Override for custom app name
+  ingress:                                              # ingress related settings
+    entries:
+      identity: identity                                # ingress entry for identity api
+      mvc: webmvc                                       # ingress entry for web mvc
+  svc:
+      identity: identity-api                            # service name for identity api
+      mvc: webmvc                                       # service name for web mvc
+      status: webstatus                                 # service name for web status

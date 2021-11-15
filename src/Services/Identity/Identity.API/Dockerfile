@@ -38,7 +38,7 @@ COPY "Services/Identity/Identity.API/Identity.API.csproj" "Services/Identity/Ide
 #COPY "Web/WebhookClient/WebhookClient.csproj" "Web/WebhookClient/WebhookClient.csproj"
 COPY "Web/WebMVC/WebMVC.csproj" "Web/WebMVC/WebMVC.csproj"
 #COPY "Web/WebSPA/WebSPA.csproj" "Web/WebSPA/WebSPA.csproj"
-#COPY "Web/WebStatus/WebStatus.csproj" "Web/WebStatus/WebStatus.csproj"
+COPY "Web/WebStatus/WebStatus.csproj" "Web/WebStatus/WebStatus.csproj"
 
 COPY "docker-compose.dcproj" "docker-compose.dcproj"
 
